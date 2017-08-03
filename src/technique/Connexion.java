@@ -9,7 +9,7 @@ public class Connexion {
 		
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/gestrec","root","");
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/gestrec?useEncoding=true&characterEncoding=UTF-8","root","");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

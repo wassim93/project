@@ -2,12 +2,16 @@ package entity;
 
 public class Personnel {
 	private int Cin;
+	private String Password;
 	private String Nom;
 	private String Prenom;
 	private Service Service;
 	private String Poste;
 	private String Email;
-	private String Password;
+	private String Adresse;
+	private int age;
+	private String sexe;
+	private String bio;
 
 	public Personnel(int cin,String password, String nom, String prenom, Service service, String poste, String email) {
 		super();
@@ -23,8 +27,33 @@ public class Personnel {
 	public Personnel() {
 		super();
 	}
+	
+
+	public Personnel(int cin, String password) {
+		super();
+		Cin = cin;
+		Password = password;
+	}
 
 	
+
+
+	public Personnel(int cin, String password, String nom, String prenom, entity.Service service, String poste,
+			String email, String adresse, int age, String sexe, String bio) {
+		super();
+		Cin = cin;
+		Password = password;
+		Nom = nom;
+		Prenom = prenom;
+		Service = service;
+		Poste = poste;
+		Email = email;
+		Adresse = adresse;
+		this.age = age;
+		this.sexe = sexe;
+		this.bio = bio;
+	}
+
 	public String getPassword() {
 		return Password;
 	}
@@ -77,11 +106,49 @@ public class Personnel {
 	public void setEmail(String email) {
 		Email = email;
 	}
+	
+	
+
+	public String getAdresse() {
+		return Adresse;
+	}
+
+	public void setAdresse(String adresse) {
+		Adresse = adresse;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getSexe() {
+		return sexe;
+	}
+
+	public void setSexe(String sexe) {
+		this.sexe = sexe;
+	}
+
+	public String getBio() {
+		return bio;
+	}
+
+	public void setBio(String bio) {
+		this.bio = bio;
+	}
 
 	@Override
 	public String toString() {
-		return "Personnel [Cin=" + Cin + ", Nom=" + Nom + ", Prenom=" + Prenom + ", Service=" + Service + ", Poste="
-				+ Poste + ", Email=" + Email + "]";
+		return "Personnel [Cin=" + Cin + ", Password=" + Password + ", Nom=" + Nom + ", Prenom=" + Prenom + ", Service="
+				+ Service + ", Poste=" + Poste + ", Email=" + Email + ", Adresse=" + Adresse + ", age=" + age
+				+ ", sexe=" + sexe + ", bio=" + bio + "]";
 	}
+
+	
+	
 	
 }

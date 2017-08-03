@@ -141,6 +141,7 @@ h6,
   color: #545454;
   font-size: 28px;
   font-weight: 400;
+  margin-bottom: -45px;
 }
 .page-heading small {
   margin-top: 5px;
@@ -5345,7 +5346,7 @@ a.list-group-item:focus {
 }
 .side-header img {
   display: inline-block;
-  margin-top: -2px;
+  margin-top: -10px;
 }
 .side-content {
   margin: 0 auto;
@@ -11706,4 +11707,33 @@ div.tagsinput span.tag a:hover {
 }
 .editor-preview {
   z-index: 1050;
+}
+
+
+.alert-box {
+	padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;  
+}
+
+.success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    display: none;
+}
+
+.failure {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    display: none;
+}
+
+.warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+    display: none;
 }

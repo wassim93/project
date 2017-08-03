@@ -43,6 +43,8 @@ public class reg extends HttpServlet {
 		IService s = new ServiceImp();
 		List<Service> ls = s.getServiceName();
 		request.setAttribute("list", ls);
+		   request.setCharacterEncoding("UTF-8");
+
 		this.getServletContext().getRequestDispatcher("/register.jsp").forward(request, response);
 	}
 
@@ -58,14 +60,15 @@ public class reg extends HttpServlet {
 
 		// creer objet service
 		Service s = new Service((request.getParameter("services")));
+		//response.getWriter().println(s);
 
-		p.setNom(request.getParameter("nom"));
-		p.setPrenom(request.getParameter("prenom"));
-		p.setCin(Integer.parseInt(request.getParameter("cin")));
-		p.setPoste(request.getParameter("poste"));
+		p.setNom(request.getParameter("register-nom"));
+		p.setPrenom(request.getParameter("register-prenom"));
+		p.setCin(Integer.parseInt(request.getParameter("register-cin")));
+		p.setPoste(request.getParameter("register-poste"));
 		p.setService(s);
-		p.setPassword(request.getParameter("password"));
-		p.setEmail(request.getParameter("email"));
+		p.setPassword(request.getParameter("register-password"));
+		p.setEmail(request.getParameter("register-email"));
 
 		// get id of chosen service
 		IService is = new ServiceImp();
@@ -75,8 +78,7 @@ public class reg extends HttpServlet {
 		IPersonnel ip = new PersonnelImp();
 
 		RequestDispatcher rd = getServletContext().getRequestDispatcher("/register.jsp");
-		PrintWriter out = response.getWriter();
-
+		
 		boolean existe = ip.RegisterPersonnel(p, s);
 		if (existe) {
 			String success = "<div class=\"notify successbox\" style=\"display:-webkit-box;\">\r\n"
@@ -99,6 +101,8 @@ public class reg extends HttpServlet {
 		IService s1 = new ServiceImp();
 		List<Service> ls = s1.getServiceName();
 		request.setAttribute("list", ls);
+		request.setCharacterEncoding("UTF-8");
+
 		this.getServletContext().getRequestDispatcher("/register.jsp").forward(request, response);
 
 	}

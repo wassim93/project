@@ -15,17 +15,24 @@ public class testFiche {
 		//FicheNonConformite f = new FicheNonConformite(17,"05/05/2016", "aeroport", "processus",59, "nature", "cause", "consequence", "action", "solution", "responsable", "echeance", "mesEfficacite");
 		IFicheNonConformite fich = new FicheNonConformiteImp();
 		//System.out.println(f);
-		//fich.AddFiche(f);
+		
 		//fich.DeleteFiche(16);	
-		Service s = new Service("Acceptation");
+		/*Service s = new Service("Acceptation");
 		System.out.println(s);
 
-		List<FicheNonConformite> ls = fich.ConsultFiche(s);
+		List<FicheNonConformite> ls = fich.getAllFiches();
 		
 		for (FicheNonConformite f:ls)
 		{
 			System.out.println(f);
 		}
-		}
+	*/
+	 // FicheNonConformite f = new FicheNonConformite(17,"05/05/2016", "aeroport", "processus",1, "nature", "cause", "consequence", "action", "solution", "responsable", "echeance", "mesEfficacite");
+	  /*fich.AddFiche(f);
+	  f.setDate("20/07/2011");
+	  fich.ModifFiche(f);*/
+		FicheNonConformite f = fich.getFichebyNum(2);
+		System.out.print(f);
 
+}
 }

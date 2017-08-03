@@ -53,7 +53,7 @@
                 <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
                     <!-- Register Block -->
                     <div class="block block-themed animated fadeIn">
-                        <div class="block-header bg-success">
+                        <div class="block-header " style="background-color: #eb2c24;">
                             <ul class="block-options">
                                 <li>
                                     <a href="login.jsp" data-toggle="tooltip" data-placement="left" title="Se connecter"><i class="si si-login"></i></a>
@@ -63,7 +63,9 @@
                         </div>
                         <div class="block-content block-content-full block-content-narrow">
                             <!-- Register Title -->
-                            <h1 class="h2 font-w600 push-30-t push-5">Tunisair Handling</h1>
+								<div class="text-center" style="margin-top: -33px;margin-bottom: -25px;">
+                                <img src="csindex/images/logo.png" alt="" style="height: 180px;">
+                            </div>                            
                             <p>
                             <c:choose>
                             <c:when test="${existe == true}">${success}</c:when>
@@ -136,7 +138,7 @@
                                 </div>
                                 <div class="form-group" >
                                     <div class="col-xs-12 col-sm-6 col-md-5">
-                                        <button class="btn btn-block btn-success" type="submit" style="width:105%;position:absolute;margin-left:50%;"><i class="fa fa-plus pull-right"></i> Créer un compte</button>
+                                        <button class="btn btn-block" type="submit" style="width:105%;position:absolute;margin-left:50%;background-color: #eb2c24;color: white"><i class="fa fa-plus pull-right"></i> Crï¿½er un compte</button>
                                     </div>
                                 </div>
                             </form>

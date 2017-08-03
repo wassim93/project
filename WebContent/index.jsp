@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title>Mountain King - Bootstrap Template</title>
+        <title>Bienvenue || Tunisair Handling</title>
         <!-- Bootstrap core CSS -->
         <link href="csindex/bootstrap/css/theme.css" rel="stylesheet">
         <!-- Custom styles for this template -->
@@ -48,15 +48,13 @@
                     <div class="row">
                         <div class="col-md-3 col-xs-10">
                             <a href="#" class="thumbnail logo">
-                                <img src="csindex/images/tunisair_logo.png" alt="" class="img-responsive">
+                                <img src="csindex/images/logo.png" alt="" class="img-responsive">
                             </a>
                         </div>
                                 <div class="jumbotron">
-                        <h1><small></small></br>
-						<strong>Bienvenue</strong></h1>
-                        <p>This is a simple hero unit, a simple jumbotron-style component for<br>
-calling extra attention to featured content or information.</p>
-                        <p>
+                        <h1>
+						<strong style="margin-left: 120px;">Bienvenue</strong></h1>
+   						<p style="margin-top:35%;">
 	                        <a class="btn btn-primary btn-lg" href="register" role="button">S'inscrire</a> 
                         	<a class="btn btn-lg btn-danger" href="login" role="button">Se connecter</a>
                         </p>

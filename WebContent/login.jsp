@@ -1,8 +1,9 @@
+<%@ page pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <!--[if IE 9]>         <html class="ie9 no-focus" lang="en"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-focus" lang="en"> <!--<![endif]-->
     <head>
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
 
         <title>S'authentifier</title>
 
@@ -51,23 +52,23 @@
                 <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
                     <!-- Lock Screen Block -->
                     <div class="block block-themed animated bounceIn">
-                        <div class="block-header bg-primary">
+                        <div class="block-header" style="background-color: #eb2c24;">
                             <ul class="block-options">
                                 <li>
-                                    <a href="">Mot de passe oublié?</a>
+                                    <a href="">Mot de passe oubliÃ©?</a>
                                 </li>
                                 <li>
                                     <a href="register" data-toggle="tooltip" data-placement="left" title="Nouveau compte"><i class="si si-plus"></i></a>
                                 </li>
                             </ul>
-                            <h3 class="block-title">Se connecter</h3>
+                            <h3 class="block-title">Se connecter</h3>                            
                         </div>
                         <div class="block-content block-content-full block-content-narrow">
                             <!-- Lock Screen Avatar -->
-                            <div class="text-center push-15-t push-15">
-                                <img class="img-avatar img-avatar96" src="images/tunisair_logo.png" alt="">
+                            <div class="text-center  push-15">
+                                <img src="csindex/images/logo.png" alt="" style="height: 180px;">
                             </div>
-                            ${error}
+                            <span style="text-align:center;">${error}</span>
                             <!-- END Lock Screen Avatar -->
 
                             <!-- Lock Screen Form -->
@@ -75,13 +76,13 @@
                             <!-- For more examples you can check out https://github.com/jzaefferer/jquery-validation -->
                             <form class="js-validation-lock form-horizontal push-30-t push-30" action="login" method="post">
                                 <div class="form-group" style="margin-left:-15px;">
-                                <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+                                <div class="col-xs-12 col-sm-12">
                                         <div class="form-material form-material-primary">
                                             <input class="form-control" type="number" id="" name="cin" placeholder="Votre Cin ">
                                             <label for="identifiant">Identifiant</label>
                                         </div>
                                     </div>
-                                    <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+                                    <div class="col-xs-12 col-sm-12">
                                         <div class="form-material form-material-primary">
                                             <input class="form-control" type="password" id="lock-password" name="password" placeholder="Votre mot de passe">
                                             <label for="lock-password">Mot de passe</label>
@@ -91,13 +92,13 @@
                                  <div class="form-group">
                                     <div class="col-xs-12">
                                         <label class="css-input switch switch-sm switch-primary">
-                                            <input type="checkbox" id="login-remember-me" name="login-remember-me"><span></span> Se souvenir de moi?
+                                            <input type="checkbox" id="login-remember-me" name="remember"><span></span> Se souvenir de moi?
                                         </label>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-xs-12 col-sm-6 col-md-4">
-                                        <button class="btn btn-block btn-primary" type="submit" style="width:115%;">
+                                        <button class="btn btn-block" type="submit" style="width:115%;background-color: #eb2c24;color: white;">
                                         <i class="si si-login pull-right"></i> Connexion</button>
                                     </div>
                                 </div>

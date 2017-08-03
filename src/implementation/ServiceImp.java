@@ -55,4 +55,48 @@ public class ServiceImp implements IService {
 		return id;
 	}
 
+	@Override
+	public String getServiceName(int id) {
+		// TODO Auto-generated method stub
+		Connection cnx = Connexion.getConnection();
+		String name = null;
+		try {
+			PreparedStatement ps = cnx.prepareStatement("SELECT nom FROM service where id = ?");
+			ps.setInt(1, id);
+			ResultSet rs=ps.executeQuery();
+			while(rs.next()) {
+				name = rs.getString(1);
+				
+			}
+			
+		
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return name;	}
+
+	@Override
+	public List<Service> getNonActuelService(String serviceActuel) {
+		Connection cnx = Connexion.getConnection();
+		List<Service> list =  new ArrayList<>();
+		try {
+			PreparedStatement ps = cnx.prepareStatement("SELECT * FROM service");
+			ResultSet rs=ps.executeQuery();
+			while(rs.next()) {
+				if (! rs.getString(2).equals(serviceActuel)) {
+				Service s = new Service(rs.getInt(1),rs.getString(2));
+				list.add(s);
+				}
+				
+			}
+			
+		
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return list;
+	}
+
 }

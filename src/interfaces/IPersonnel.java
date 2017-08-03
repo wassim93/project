@@ -9,4 +9,6 @@ public interface IPersonnel {
 
 	public boolean RegisterPersonnel(Personnel p,Service s);
 	public boolean loginPersonnel(int cin,String password);
+	public Personnel getPersonnelInfos(int cin);
+	public boolean updateInfos(Personnel p);
 }

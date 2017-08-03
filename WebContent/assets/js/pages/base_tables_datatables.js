@@ -14,31 +14,10 @@ var BaseTableDatatables = function() {
         });
     };
 
-    // Init full extra DataTable, for more examples you can check out https://www.datatables.net/
-    var initDataTableFullPagination = function() {
-        jQuery('.js-dataTable-full-pagination').dataTable({
-            pagingType: "full_numbers",
-            columnDefs: [ { orderable: false, targets: [ 4 ] } ],
-            pageLength: 10,
-            lengthMenu: [[5, 10, 15, 20], [5, 10, 15, 20]]
-        });
-    };
+
 
     // Init simple DataTable, for more examples you can check out https://www.datatables.net/
-    var initDataTableSimple = function() {
-        jQuery('.js-dataTable-simple').dataTable({
-            columnDefs: [ { orderable: false, targets: [ 4 ] } ],
-            pageLength: 10,
-            lengthMenu: [[5, 10, 15, 20], [5, 10, 15, 20]],
-            searching: false,
-            oLanguage: {
-                sLengthMenu: ""
-            },
-            dom:
-                "<'row'<'col-sm-12'tr>>" +
-                "<'row'<'col-sm-6'i><'col-sm-6'p>>"
-        });
-    };
+   
 
     // DataTables Bootstrap integration
     var bsDataTables = function() {
@@ -196,9 +175,7 @@ var BaseTableDatatables = function() {
         init: function() {
             // Init Datatables
             bsDataTables();
-            initDataTableSimple();
             initDataTableFull();
-            initDataTableFullPagination();
         }
     };
 }();
